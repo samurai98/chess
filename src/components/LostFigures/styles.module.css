@@ -1,0 +1,10 @@
+.lost {
+  height: 50vh;
+  padding: 8px 24px;
+  margin-left: 48px;
+  background-color: lightgray;
+}
+
+.lost > div {
+  display: flex;
+}

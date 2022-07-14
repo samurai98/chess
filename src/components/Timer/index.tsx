@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { Player } from '../models/Player';
-import { Colors } from '../models/Colors';
+import { Player } from '../../models/Player';
+import { Colors } from '../../models/Colors';
+import styles from './styles.module.css';
 
 export const Timer = ({ currentPlayer, restart }: { currentPlayer: Player | null; restart: () => void }) => {
   const [blackTime, setBlackTime] = useState(300);
@@ -23,6 +24,7 @@ export const Timer = ({ currentPlayer, restart }: { currentPlayer: Player | null
   function decrementBlackTimer() {
     setBlackTime(prev => prev - 1);
   }
+
   function decrementWhiteTimer() {
     setWhiteTime(prev => prev - 1);
   }
@@ -34,7 +36,7 @@ export const Timer = ({ currentPlayer, restart }: { currentPlayer: Player | null
   };
 
   return (
-    <div className="timer">
+    <div className={styles.timer}>
       <h2>Black - {blackTime}</h2>
       <h2>White - {whiteTime}</h2>
 

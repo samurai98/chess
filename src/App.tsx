@@ -36,6 +36,7 @@ export const App = () => {
       <BoardComponent board={board} setBoard={setBoard} currentPlayer={currentPlayer} swapPlayer={swapPlayer} />
 
       <LostFigures title="Black figures" figures={board.lostBlackFigures} />
+
       <LostFigures title="White figures" figures={board.lostWhiteFigures} />
     </div>
   );

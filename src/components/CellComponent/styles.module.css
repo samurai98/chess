@@ -1,0 +1,30 @@
+.cell {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-cell {
+  background-color: #79523c;
+}
+
+.white-cell {
+  background-color: rgb(192, 181, 170)
+}
+
+.selected-cell {
+  background-color: #33CC66;
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.available-attack-cell {
+  background-color: rgb(184, 52, 52);
+}

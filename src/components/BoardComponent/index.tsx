@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import { Board } from '../models/Board';
-import { Cell } from '../models/Cell';
-import { Player } from '../models/Player';
-import { CellComponent } from './CellComponent';
+import { Board } from '../../models/Board';
+import { Cell } from '../../models/Cell';
+import { Player } from '../../models/Player';
+import { CellComponent } from '../CellComponent';
+import styles from './styles.module.css';
 
 export const BoardComponent = ({
   board,
@@ -44,7 +45,7 @@ export const BoardComponent = ({
   return (
     <div>
       <h3>Move {currentPlayer?.color}</h3>
-      <div className="board">
+      <div className={styles.board}>
         {board.cells.map((row, index) => (
           <React.Fragment key={index}>
             {row.map(cell => (
@@ -58,26 +59,16 @@ export const BoardComponent = ({
           </React.Fragment>
         ))}
 
-        <div className="col">
-          <span>a</span>
-          <span>b</span>
-          <span>c</span>
-          <span>d</span>
-          <span>e</span>
-          <span>f</span>
-          <span>g</span>
-          <span>h</span>
+        <div className={styles.col}>
+          {['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].map(col => (
+            <span key={col}>{col}</span>
+          ))}
         </div>
 
-        <div className="row">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
-          <span>6</span>
-          <span>7</span>
-          <span>8</span>
+        <div className={styles.row}>
+          {['1', '2', '3', '4', '5', '6', '7', '8'].map(row => (
+            <span key={row}>{row}</span>
+          ))}
         </div>
       </div>
     </div>

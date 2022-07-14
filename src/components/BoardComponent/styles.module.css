@@ -1,0 +1,39 @@
+.board {
+  width: calc(75px * 8);
+  height: calc(75px * 8);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.col {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+  
+.row {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.row span, .col span {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+  
+.row span {
+  height: calc(100% / 8);
+  padding-left: 2px;
+}
+  
+.col span {
+  width: calc(100% / 8);
+  padding-right: 2px;
+}

@@ -1,8 +1,9 @@
-import { Figure } from '../models/figures/Figure';
+import { Figure } from '../../models/figures/Figure';
+import styles from './styles.module.css';
 
 export const LostFigures = ({ title, figures }: { title: string; figures: Figure[] }) => {
   return (
-    <div className="lost">
+    <div className={styles.lost}>
       <h3>{title}</h3>
 
       {figures.map((figure, index) => (

@@ -1,0 +1,12 @@
+.timer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px;
+}
+
+.timer button {
+  width: 100%;
+}
