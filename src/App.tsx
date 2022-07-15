@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { BoardComponent } from './components/BoardComponent';
 import { Board } from './models/Board';
@@ -10,9 +10,9 @@ import './App.css';
 
 export const App = () => {
   const [board, setBoard] = useState(new Board());
-  const [blackPlayer] = useState(new Player(Colors.black));
-  const [whitePlayer] = useState(new Player(Colors.white));
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
+
+  const [blackPlayer, whitePlayer] = useMemo(() => [new Player(Colors.black), new Player(Colors.white)], []);
 
   const restart = useCallback(() => {
     const newBoard = new Board();
